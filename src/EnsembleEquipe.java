@@ -10,16 +10,16 @@ public class EnsembleEquipe {
     	equipes.add(e); }
     public void supprimerEquipe(Equipe e) {  equipes.remove(e);  
     }
-    //TODO Question 3
+
     public boolean rechercherEquipe(Equipe e) {
      return	getEquipes().stream().anyMatch(s -> s.equals(e));  	
     }
-    //TODO Question 4
+   
     public void afficherEquipe() {
     	equipes.forEach(s->System.out.println(s));
     }
     
-    //TODO Question 5 
+
     public Set<Equipe> trierParEquipesParNomStream(){
     	return  equipes.stream().sorted(Comparator.comparing(Equipe::getNom)).collect(
     			Collectors.toSet());  	
